@@ -5,4 +5,10 @@
       dockerfile: ./Dockerfile
     ports:
       - "8080:8080"
-      
+    depends_on:
+      - web-api
+  web-api:
+    build:
+      context: ../../
+      dockerfile: ./scenarios/scenario-http-proxy/src/scenario-http-proxy-web-api/Dockerfile
+        
