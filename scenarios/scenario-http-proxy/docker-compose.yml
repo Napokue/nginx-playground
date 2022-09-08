@@ -11,4 +11,5 @@
     build:
       context: ../../
       dockerfile: ./scenarios/scenario-http-proxy/src/scenario-http-proxy-web-api/Dockerfile
-        
+    ports:
+      - "8081:80"
